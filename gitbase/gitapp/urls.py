@@ -7,8 +7,9 @@ from .views import *
 
 
 urlpatterns = [
-    path('', index),
-    path('form', newsform, name='form')
+    path('', index, name='index'),
+    path('form', newsform, name='form'),
+    path('succes', succes, name='succes')
 ]
 
 if settings.DEBUG:
