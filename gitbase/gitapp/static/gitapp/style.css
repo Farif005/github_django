@@ -1,0 +1,36 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style: none;
+}
+
+.news_block {
+    max-width: 1170px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*header*/
+
+header {
+    margin-top: 50px;
+    margin-bottom: 45px;
+}
+
+.header_list {
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.h2_title {
+    margin-bottom: 20px;
+}
+
+.h2_img {
+    margin-bottom: 30px;
+}

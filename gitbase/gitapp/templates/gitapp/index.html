@@ -1,0 +1,14 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+
+<div class="news_block">
+
+    {% for n in news %}
+    <h2 class="h2_title">{{ n.title }}</h2>
+    <img class="h2_img" src="{{ n.image.url }}">
+    {% endfor %}
+
+</div>
+
+{% endblock %}
