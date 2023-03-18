@@ -1,0 +1,25 @@
+{% extends 'layout/base.html' %}
+
+{% block content %}
+
+<div class="news_content">
+    <div class="news_genres">
+        {% for g in genres %}
+            <a href="/{{ g.pk }}/" class="genres_link">{{ g.title }}</a>
+        {% endfor %}
+
+        <div class="news">
+            <h1 class="genre_title">{{ current_genre.title }}</h1>
+            {% for n in news %}
+                <h2 class="h2_title">{{ n.title }}</h2>
+                <img class="h2_img" src="{{ n.image.url }}">
+                <a href="/{{ current_genre.pk }}/">{{ n.genre }}</a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

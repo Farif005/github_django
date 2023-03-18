@@ -2,13 +2,25 @@
 
 {% block content %}
 
-<div class="news_block">
+<div class="news_content">
+
+    <div class="news_genres">
+        {% for g in genres %}
+            <a href="/{{ g.pk }}/" class="genres_link">{{ g.title }}</a>
+        {% endfor %}
+    </div>
+
+    <div class="news">
 
     {% for n in news %}
-    <h2 class="h2_title">{{ n.title }}</h2>
-    <img class="h2_img" src="{{ n.image.url }}">
+        <h2 class="h2_title">{{ n.title }}</h2>
+        <img class="h2_img" src="{{ n.image.url }}">
+        <a href="/{{ n.genre.pk }}/">{{ n.genre }}</a>
     {% endfor %}
 
 </div>
+</div>
+
+
 
 {% endblock %}

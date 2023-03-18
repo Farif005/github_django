@@ -11,30 +11,70 @@ li {
     list-style: none;
 }
 
-.news_block {
-    max-width: 1170px;
-    margin: 0 auto;
-    text-align: center;
+body {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
 }
 
 /*header*/
 
 header {
-    margin-top: 50px;
-    margin-bottom: 45px;
+    padding-top: 22px;
+    padding-bottom: 22px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 21px rgba(0, 0, 0, 0.06);
 }
 
 .header_list {
-    max-width: 1170px;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-.h2_title {
-    margin-bottom: 20px;
+.logo_text {
+    width: 114px;
 }
 
-.h2_img {
-    margin-bottom: 30px;
+.header_item {
+    margin-left: 62px;
+}
+
+.header_item:first-child {
+    margin-left: 0;
+}
+
+.hedaer_link {
+    position: relative;
+    font-size: 18px;
+    line-height: 17px;
+    color: #252A34;
+}
+
+.hedaer_link:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: black; /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+.hedaer_link:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; /* Высота линии */
+    background-color: red; /* Цвет подчеркивания при появлении линии*/
+    transition: width 0.5s;  /* Время эффекта */
+}
+
+/*news*/
+
+.news_content {
+    display: flex;
 }

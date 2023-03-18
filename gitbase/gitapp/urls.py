@@ -8,6 +8,7 @@ from .views import *
 
 urlpatterns = [
     path('', index, name='index'),
+    path('<int:genre_id>/', genredef, name='genre'),
     path('form', newsform, name='form'),
     path('succes', succes, name='succes')
 ]
