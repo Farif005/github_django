@@ -6,7 +6,7 @@
 
     <div class="news_genres">
         {% for g in genres %}
-            <a href="/{{ g.pk }}/" class="genres_link">{{ g.title }}</a>
+            <a href="{% url 'genre' g.pk %}" class="genres_link">{{ g.title }}</a>
         {% endfor %}
     </div>
 
@@ -15,7 +15,7 @@
     {% for n in news %}
         <h2 class="h2_title">{{ n.title }}</h2>
         <img class="h2_img" src="{{ n.image.url }}">
-        <a href="/{{ n.genre.pk }}/">{{ n.genre }}</a>
+        <a href="{% url 'genre' n.genre.pk %}">{{ n.genre }}</a>
     {% endfor %}
 
 </div>
